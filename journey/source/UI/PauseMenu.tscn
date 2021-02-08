@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://source/UI/button/OptionsButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://source/UI/PauseMenu.gd" type="Script" id=2]
+[ext_resource path="res://source/UI/button/ContinueButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://source/UI/button/MainMenuButton.tscn" type="PackedScene" id=4]
+
+[node name="PauseMenu" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuBackground" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -79.0
+margin_top = -115.0
+margin_right = 79.0
+margin_bottom = 115.0
+color = Color( 0.176471, 0.176471, 0.176471, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -49.0
+margin_top = -85.0
+margin_right = 49.0
+margin_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 10
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ContinueButton" parent="Buttons" instance=ExtResource( 3 )]
+margin_right = 98.0
+margin_bottom = 50.0
+
+[node name="OptionsButton" parent="Buttons" instance=ExtResource( 1 )]
+margin_top = 60.0
+margin_right = 98.0
+margin_bottom = 110.0
+
+[node name="MainMenuButton" parent="Buttons" instance=ExtResource( 4 )]
+margin_top = 120.0
+margin_right = 98.0
+margin_bottom = 170.0
+[connection signal="pressed" from="Buttons/ContinueButton" to="." method="_on_ContinueButton_pressed"]
+[connection signal="pressed" from="Buttons/OptionsButton" to="." method="_on_OptionsButton_pressed"]
+[connection signal="pressed" from="Buttons/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]

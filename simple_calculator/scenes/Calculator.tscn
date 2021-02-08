@@ -1,0 +1,214 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scripts/Calculator_4.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/font/KenPixel Mini Square.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://scenes/Display.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/ButtonsPad.tscn" type="PackedScene" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+font_data = ExtResource( 3 )
+
+[node name="Calculator" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Background" parent="." instance=ExtResource( 2 )]
+layer = -10
+
+[node name="MCont" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+
+[node name="VCont" type="VBoxContainer" parent="MCont"]
+margin_right = 320.0
+margin_bottom = 440.0
+custom_constants/separation = 1
+alignment = 1
+
+[node name="OperationLabel" type="Label" parent="MCont/VCont"]
+margin_right = 320.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "operation"
+align = 2
+valign = 1
+
+[node name="Display" parent="MCont/VCont" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 16.0
+margin_right = 320.0
+margin_bottom = 109.0
+
+[node name="ButtonsPad" parent="MCont/VCont" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 110.0
+margin_right = 320.0
+margin_bottom = 440.0
+rect_min_size = Vector2( 0, 330 )
+
+[node name="GridContainer" parent="MCont/VCont/ButtonsPad/ColorRect/MarginContainer" index="0"]
+margin_right = 300.0
+margin_bottom = 310.0
+
+[node name="Button_AC" parent="MCont/VCont/ButtonsPad/ColorRect/MarginContainer/GridContainer" index="0" groups=[
+"clear",
+]]
+margin_right = 74.0
+margin_bottom = 61.0
+
+[node name="Button_Convert" parent="MCont/VCont/ButtonsPad/ColorRect/MarginContainer/GridContainer" index="1" groups=[
+"convert",
+]]
+margin_left = 75.0
+margin_right = 149.0
+margin_bottom = 61.0
+
+[node name="Button_Percentage" parent="MCont/VCont/ButtonsPad/ColorRect/MarginContainer/GridContainer" index="2" groups=[
+"operator",
+]]
+margin_left = 150.0
+margin_right = 224.0
+margin_bottom = 61.0
+
+[node name="Button_Division" parent="MCont/VCont/ButtonsPad/ColorRect/MarginContainer/GridContainer" index="3" groups=[
+"operator",
+]]
+margin_left = 225.0
+margin_right = 299.0
+margin_bottom = 61.0
+
+[node name="Button_Seven" parent="MCont/VCont/ButtonsPad/ColorRect/MarginContainer/GridContainer" index="4" groups=[
+"number",
+]]
+margin_top = 62.0
+margin_right = 74.0
+margin_bottom = 123.0
+
+[node name="Button_Eight" parent="MCont/VCont/ButtonsPad/ColorRect/MarginContainer/GridContainer" index="5" groups=[
+"number",
+]]
+margin_left = 75.0
+margin_top = 62.0
+margin_right = 149.0
+margin_bottom = 123.0
+
+[node name="Button_Nine" parent="MCont/VCont/ButtonsPad/ColorRect/MarginContainer/GridContainer" index="6" groups=[
+"number",
+]]
+margin_left = 150.0
+margin_top = 62.0
+margin_right = 224.0
+margin_bottom = 123.0
+
+[node name="Button_Multi" parent="MCont/VCont/ButtonsPad/ColorRect/MarginContainer/GridContainer" index="7" groups=[
+"operator",
+]]
+margin_left = 225.0
+margin_top = 62.0
+margin_right = 299.0
+margin_bottom = 123.0
+
+[node name="Button_Four" parent="MCont/VCont/ButtonsPad/ColorRect/MarginContainer/GridContainer" index="8" groups=[
+"number",
+]]
+margin_top = 124.0
+margin_right = 74.0
+margin_bottom = 185.0
+
+[node name="Button_Five" parent="MCont/VCont/ButtonsPad/ColorRect/MarginContainer/GridContainer" index="9" groups=[
+"number",
+]]
+margin_left = 75.0
+margin_top = 124.0
+margin_right = 149.0
+margin_bottom = 185.0
+
+[node name="Button_Six" parent="MCont/VCont/ButtonsPad/ColorRect/MarginContainer/GridContainer" index="10" groups=[
+"number",
+]]
+margin_left = 150.0
+margin_top = 124.0
+margin_right = 224.0
+margin_bottom = 185.0
+
+[node name="Button_Minus" parent="MCont/VCont/ButtonsPad/ColorRect/MarginContainer/GridContainer" index="11" groups=[
+"operator",
+]]
+margin_left = 225.0
+margin_top = 124.0
+margin_right = 299.0
+margin_bottom = 185.0
+
+[node name="Button_One" parent="MCont/VCont/ButtonsPad/ColorRect/MarginContainer/GridContainer" index="12" groups=[
+"number",
+]]
+margin_top = 186.0
+margin_right = 74.0
+margin_bottom = 247.0
+
+[node name="Button_Two" parent="MCont/VCont/ButtonsPad/ColorRect/MarginContainer/GridContainer" index="13" groups=[
+"number",
+]]
+margin_left = 75.0
+margin_top = 186.0
+margin_right = 149.0
+margin_bottom = 247.0
+
+[node name="Button_Three" parent="MCont/VCont/ButtonsPad/ColorRect/MarginContainer/GridContainer" index="14" groups=[
+"number",
+]]
+margin_left = 150.0
+margin_top = 186.0
+margin_right = 224.0
+margin_bottom = 247.0
+
+[node name="Button_Plus" parent="MCont/VCont/ButtonsPad/ColorRect/MarginContainer/GridContainer" index="15" groups=[
+"operator",
+]]
+margin_left = 225.0
+margin_top = 186.0
+margin_right = 299.0
+margin_bottom = 247.0
+
+[node name="Button_Fun" parent="MCont/VCont/ButtonsPad/ColorRect/MarginContainer/GridContainer" index="16" groups=[
+"clear",
+]]
+margin_top = 248.0
+margin_right = 74.0
+margin_bottom = 309.0
+
+[node name="Button_Zero" parent="MCont/VCont/ButtonsPad/ColorRect/MarginContainer/GridContainer" index="17" groups=[
+"number",
+]]
+margin_left = 75.0
+margin_top = 248.0
+margin_right = 149.0
+margin_bottom = 309.0
+
+[node name="Button_Point" parent="MCont/VCont/ButtonsPad/ColorRect/MarginContainer/GridContainer" index="18" groups=[
+"convert",
+]]
+margin_left = 150.0
+margin_top = 248.0
+margin_right = 224.0
+margin_bottom = 309.0
+
+[node name="Button_Equal" parent="MCont/VCont/ButtonsPad/ColorRect/MarginContainer/GridContainer" index="19" groups=[
+"result",
+]]
+margin_left = 225.0
+margin_top = 248.0
+margin_right = 299.0
+margin_bottom = 309.0
+
+[editable path="MCont/VCont/ButtonsPad"]

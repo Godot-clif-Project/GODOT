@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/Button_Base.tscn" type="PackedScene" id=1]
+
+[node name="Button_Six" instance=ExtResource( 1 )]
+text = "6"

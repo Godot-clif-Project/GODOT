@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://source/UI/button/MenuButton.gd" type="Script" id=1]
+[ext_resource path="res://assets/font/player_state_label.tres" type="DynamicFont" id=2]
+
+[node name="MainMenuButton" type="Button"]
+margin_right = 84.0
+margin_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+text = "MAIN MENU"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

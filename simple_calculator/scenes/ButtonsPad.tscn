@@ -1,0 +1,205 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://scenes/Buttons/Button_AC.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Buttons/Button_Convert.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Buttons/Button_Percentage.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Buttons/Button_Division.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Buttons/Button_Seven.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Buttons/Button_Eight.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Buttons/Button_Nine.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Buttons/Button_Multi.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Buttons/Button_Four.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/Buttons/Button_Five.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/Buttons/Button_Six.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/Buttons/Button_Minus.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/Buttons/Button_One.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/Buttons/Button_Two.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/Buttons/Button_Three.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/Buttons/Button_Plus.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/Buttons/Button_Fun.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/Buttons/Button_Zero.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/Buttons/Button_Point.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/Buttons/Button_Equal.tscn" type="PackedScene" id=20]
+
+[node name="ButtonsPad" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.815686, 0.447059, 0.447059, 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect/MarginContainer"]
+margin_right = 340.0
+margin_bottom = 460.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/vseparation = 1
+custom_constants/hseparation = 1
+columns = 4
+
+[node name="Button_AC" parent="ColorRect/MarginContainer/GridContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 84.0
+margin_bottom = 91.0
+
+[node name="Button_Convert" parent="ColorRect/MarginContainer/GridContainer" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 85.0
+margin_right = 169.0
+margin_bottom = 91.0
+
+[node name="Button_Percentage" parent="ColorRect/MarginContainer/GridContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 170.0
+margin_right = 254.0
+margin_bottom = 91.0
+
+[node name="Button_Division" parent="ColorRect/MarginContainer/GridContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 255.0
+margin_right = 339.0
+margin_bottom = 91.0
+
+[node name="Button_Seven" parent="ColorRect/MarginContainer/GridContainer" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 92.0
+margin_right = 84.0
+margin_bottom = 183.0
+
+[node name="Button_Eight" parent="ColorRect/MarginContainer/GridContainer" instance=ExtResource( 6 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 85.0
+margin_top = 92.0
+margin_right = 169.0
+margin_bottom = 183.0
+
+[node name="Button_Nine" parent="ColorRect/MarginContainer/GridContainer" instance=ExtResource( 7 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 170.0
+margin_top = 92.0
+margin_right = 254.0
+margin_bottom = 183.0
+
+[node name="Button_Multi" parent="ColorRect/MarginContainer/GridContainer" instance=ExtResource( 8 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 255.0
+margin_top = 92.0
+margin_right = 339.0
+margin_bottom = 183.0
+
+[node name="Button_Four" parent="ColorRect/MarginContainer/GridContainer" instance=ExtResource( 9 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 184.0
+margin_right = 84.0
+margin_bottom = 275.0
+
+[node name="Button_Five" parent="ColorRect/MarginContainer/GridContainer" instance=ExtResource( 10 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 85.0
+margin_top = 184.0
+margin_right = 169.0
+margin_bottom = 275.0
+
+[node name="Button_Six" parent="ColorRect/MarginContainer/GridContainer" instance=ExtResource( 11 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 170.0
+margin_top = 184.0
+margin_right = 254.0
+margin_bottom = 275.0
+
+[node name="Button_Minus" parent="ColorRect/MarginContainer/GridContainer" instance=ExtResource( 12 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 255.0
+margin_top = 184.0
+margin_right = 339.0
+margin_bottom = 275.0
+
+[node name="Button_One" parent="ColorRect/MarginContainer/GridContainer" instance=ExtResource( 13 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 276.0
+margin_right = 84.0
+margin_bottom = 367.0
+
+[node name="Button_Two" parent="ColorRect/MarginContainer/GridContainer" instance=ExtResource( 14 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 85.0
+margin_top = 276.0
+margin_right = 169.0
+margin_bottom = 367.0
+
+[node name="Button_Three" parent="ColorRect/MarginContainer/GridContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 170.0
+margin_top = 276.0
+margin_right = 254.0
+margin_bottom = 367.0
+
+[node name="Button_Plus" parent="ColorRect/MarginContainer/GridContainer" instance=ExtResource( 16 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 255.0
+margin_top = 276.0
+margin_right = 339.0
+margin_bottom = 367.0
+
+[node name="Button_Fun" parent="ColorRect/MarginContainer/GridContainer" instance=ExtResource( 17 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 368.0
+margin_right = 84.0
+margin_bottom = 459.0
+
+[node name="Button_Zero" parent="ColorRect/MarginContainer/GridContainer" instance=ExtResource( 18 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 85.0
+margin_top = 368.0
+margin_right = 169.0
+margin_bottom = 459.0
+
+[node name="Button_Point" parent="ColorRect/MarginContainer/GridContainer" instance=ExtResource( 19 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 170.0
+margin_top = 368.0
+margin_right = 254.0
+margin_bottom = 459.0
+
+[node name="Button_Equal" parent="ColorRect/MarginContainer/GridContainer" instance=ExtResource( 20 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 255.0
+margin_top = 368.0
+margin_right = 339.0
+margin_bottom = 459.0
