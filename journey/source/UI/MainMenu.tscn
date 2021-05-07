@@ -75,6 +75,7 @@ margin_bottom = 125.0
 margin_top = 135.0
 margin_right = 90.0
 margin_bottom = 170.0
+
 [connection signal="pressed" from="Buttons/NewGameButton" to="." method="_on_NewGameButton_pressed"]
 [connection signal="pressed" from="Buttons/ContinueButton" to="." method="_on_ContinueButton_pressed"]
 [connection signal="pressed" from="Buttons/OptionsButton" to="." method="_on_OptionsButton_pressed"]

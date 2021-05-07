@@ -120,6 +120,7 @@ anims/spawn = SubResource( 6 )
 
 [node name="DashTimer" type="Timer" parent="."]
 one_shot = true
+
 [connection signal="body_entered" from="LeftArea" to="." method="_on_LeftArea_body_entered"]
 [connection signal="body_exited" from="LeftArea" to="." method="_on_LeftArea_body_exited"]
 [connection signal="body_entered" from="RightArea" to="." method="_on_RightArea_body_entered"]
