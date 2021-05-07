@@ -14,10 +14,10 @@ script = ExtResource( 1 )
 [node name="Backgorund" parent="." instance=ExtResource( 3 )]
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-editor/display_folded = true
 position = Vector2( 339.886, 245.864 )
 
 [node name="Level1" parent="." instance=ExtResource( 5 )]
+
 [connection signal="player_state" from="Player" to="GameData" method="_on_Player_player_state"]
 [connection signal="timeout" from="Player/StaminaDropTimer" to="GameData" method="_on_StaminaDropTimer_timeout"]
 [connection signal="timeout" from="Player/StaminaRaiseTimer" to="GameData" method="_on_StaminaRaiseTimer_timeout"]
