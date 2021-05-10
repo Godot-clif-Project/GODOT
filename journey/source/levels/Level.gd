@@ -51,6 +51,16 @@ var color_palets: Dictionary = {
 }
 
 
+func set_camera_limits():
+	var map_limits = $WallTileMap.get_used_rect()
+	var map_cellsize = $WallTileMap.cell_size
+	$Player/Camera2D.limit_left = map_limits.position.x * map_cellsize.x
+	$Player/Camera2D.limit_right = map_limits.end.x * map_cellsize.x
+	$Player/Camera2D.limit_top = map_limits.position.y * map_cellsize.y
+	$Player/Camera2D.limit_bottom = map_limits.end.y * map_cellsize.y
+
+
+
 func _on_DeadArea_body_entered(body: Node) -> void:
 	if body.name == "Player":
 		body.call_deferred("dead")
@@ -65,6 +75,7 @@ func _on_DeadArea_body_entered(body: Node) -> void:
 
 
 func _ready() -> void:
+	set_camera_limits()
 	selected_random_color_palet = pick_random_color_palet()
 	level_color_setup()
 	player_scene.set_physics_process(false)

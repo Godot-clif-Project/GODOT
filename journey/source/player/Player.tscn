@@ -46,7 +46,6 @@ script = ExtResource( 2 )
 script = ExtResource( 5 )
 
 [node name="DebugLabels" type="Node2D" parent="."]
-visible = false
 
 [node name="StateLabel" type="Label" parent="DebugLabels"]
 margin_left = -14.411
@@ -121,6 +120,9 @@ anims/spawn = SubResource( 6 )
 [node name="DashTimer" type="Timer" parent="."]
 one_shot = true
 
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+smoothing_enabled = true
 [connection signal="body_entered" from="LeftArea" to="." method="_on_LeftArea_body_entered"]
 [connection signal="body_exited" from="LeftArea" to="." method="_on_LeftArea_body_exited"]
 [connection signal="body_entered" from="RightArea" to="." method="_on_RightArea_body_entered"]
