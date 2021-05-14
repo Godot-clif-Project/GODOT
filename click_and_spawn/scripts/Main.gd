@@ -2,7 +2,7 @@ extends Node2D
 
 onready var ball: PackedScene = preload("res://scenes/Ball.tscn")
 onready var container: Node = $BallContainer
-onready var HUD: Container = get_node("HUD")
+onready var HUD: Control = get_node("HUD")
 
 var mouse_position: Vector2
 
