@@ -35,3 +35,12 @@ func _ready() -> void:
 func _exit_tree() -> void:
 	print("{name} exited tree!".format({"name": self.name}))
 	self.queue_free()
+
+
+
+
+
+
+
+
+
